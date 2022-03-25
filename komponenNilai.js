@@ -51,6 +51,5 @@ const router = express.Router();
     }
     res.json(del);
     console.log("Komponen penilaian berhasil update");
-  });
-
+});
   module.exports = router;
