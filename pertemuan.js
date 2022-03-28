@@ -1,39 +1,30 @@
 const express = require ('express');
 const router = express.Router();           
 
-  //route Dosen dapat mengubah komponen penilaian
-  router.put("/Ubah", (req, res) => {
-    let upd={
-      "message":"-----Ubah Komponen Nilai-----",
-      "Course_id":"JSI62125",
-      "Name":"Pemograman Web",
-      "komponen_nilai":[ "1. Tugas   = 10%",
-                         "2. Kuis    = 15%",
-                         "3. UTS     = 35%",
-                         "4. UAS     = 35%",
-                         "5. Sikap    = 5%"
-       ]
+
+
+
+
+//Menambah pertemuan mingguan dalam RPS
+router.post("/add", (req, res) => {
+    let obj={
+        "message":"-----Silahkan tambah Pertemuan Mingguan RPS-----",
+        "course_id":"JSI62125",
+        "nama":[
+            "1. Pertemuan 1 = Pengenalan Web",
+            "2. Pertemuan 2 = Pemograman Javascript Dasar",
+            "3. Pertemuan 3 = Pemograman Javascript Lanjut",
+            "4. Pertemuan 4 = Pemograman Javascript Web",
+            "5. Pertemuan 5 = Restful API dan Format data JSON"
+        ]
+    }
+    res.json(obj);
+    console.log("Menambah pertemuan Mingguan berhasil ditambahkan");
+  });
+
+  ]
     }
     res.json(del);
     console.log("Komponen penilaian berhasil diubah");
   });
-  
-  //route Dosen dapat menghapus komponen penilaian
-  router.delete("/hapus", (req, res) => {
-    let del={
-      "message":"-----Hapus Komponen Nilai-----",
-      "Course_id":"JSI62125",
-      "Name":"Pemograman Web",
-      "komponen":[
-        "1. Tugas   = 10%",
-        "2. Kuis    = 15%",
-        "3. UTS     = 35%",
-        "4. UAS     = 35%",
-       ]
-    }
-    res.json(del);
-    console.log("Komponen penilaian berhasil dihapus");
-  });
-  
-  
   module.exports = router;
