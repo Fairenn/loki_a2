@@ -1,6 +1,7 @@
 const express = require ('express');
 const router = express.Router();
 
+//9. Route menambah CPMK
 router.put("/menambahcpmk", (req, res) => {
     console.log("====================Penambahan Data CPMK====================");
     let obj = {
@@ -21,6 +22,7 @@ router.put("/menambahcpmk", (req, res) => {
   });
 
 
+//10. Route mengubah CPMK
 router.patch("/mengubahcpmk", (req, res) => {
     console.log("====================Update Data CPMK====================");
     let obj = {
@@ -37,7 +39,7 @@ router.patch("/mengubahcpmk", (req, res) => {
                     "5. Mahasiswa mampu menggunakan dan mendesain format data JSON\n",
                     "6. Mahasiswa mampu deploy aplikasi web ke internet\n",
                     "7. Mahasiswa mampu mendemonstrasikan keterampilan bekerja sama dengan tim\n"],
-        "Cek": "Perubahan DATA CPMK BERHASIL",
+        "Cek": "PERUBAHAN DATA CPMK BERHASIL",
         "code": ["OK",200]
     }
     res.json(obj)
