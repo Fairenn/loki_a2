@@ -6,6 +6,9 @@ const port = 3000
 const komponenNilai = require('./komponenNilai');
 app.use('/komponenNilai',komponenNilai)
 
+const databaseLoki = require('./databaseLoki');
+app.use('/databaseLoki',databaseLoki)
+
 
 app.get("/cetak", (req, res) =>       
 {
