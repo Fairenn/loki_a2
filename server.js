@@ -7,10 +7,7 @@ const komponenNilai = require('./komponenNilai');
 app.use('/komponenNilai',komponenNilai)
 
 
-
-
-
-app.get("/print", (req, res) =>       
+app.get("/cetak", (req, res) =>       
 {
     res.send("Cetak RPS");
 });
