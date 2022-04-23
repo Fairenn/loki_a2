@@ -68,3 +68,5 @@ router.delete("/deletecpmk", (req, res) => {
     res.json(obj);
     console.log("\n\nHapus Data CPMK Berhasil\n");
   });
+
+module.exports = router;
