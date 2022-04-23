@@ -30,8 +30,8 @@ router.patch("/mengubahcpmk", (req, res) => {
         "message": "Data diupdate oleh dosen",
         "Nip ": "198201182008121002",
         "Nama": "Husnil Kamil, MT",
-        "Matkuliah yang diampu": "Pemograman Web",
-        "Kode Matakuliah": "JSI62125",
+        "Mata kuliah yang diampu": "Pemograman Web",
+        "Kode mata kuliah": "JSI62125",
         "CPMK": [   "1. Mahasiswa mampu menjelaskan konsep dasar dan komponen aplikasi berbasis web\n",
                     "2. Mahasiswa mampu menggunakan salah satu technology stack untuk membangun aplikasi berbasis web\n",
                     "3. Mahasiswa mampu menggunakan pemograman asynchronous\n",
@@ -44,4 +44,27 @@ router.patch("/mengubahcpmk", (req, res) => {
     }
     res.json(obj)
     console.log("\n\nBerhasil Mengubah Data CPMK\n");
+  });
+
+//11. Route Menghapus CPMK
+router.delete("/deletecpmk", (req, res) => {
+    console.log("====================Delete Data CPMK====================");
+    let obj = {
+        "Keterangan": "Delete CPMK mata kuliah",
+        "message": "Data dihapus oleh dosen",
+        "NIP ": "198201182008121002",
+        "Nama": "Husnil Kamil, M.T.",
+        "Mata kuliah yang diampu": "Pemrograman Web",
+        "Kode mata kuliah": "JSI62125",
+        "CPMK": [   "1. Mahasiswa mampu menjelaskan konsep dasar dan komponen aplikasi berbasis web\n",
+                    "2. Mahasiswa mampu menggunakan salah satu technology stack untuk membangun aplikasi berbasis web\n",
+                    "3. Mahasiswa mampu menggunakan pemograman asynchronous\n",
+                    "4. Mahasiswa mampu menerapkan keamanan untuk situs web\n",
+                    "5. Mahasiswa mampu menggunakan dan mendesain format data JSON & deploy aplikasi web ke internet\n"
+                ],
+        "Cek": "DELETE DATA CPMK BERHASIL",
+        "code": ["OK",200]
+    }
+    res.json(obj);
+    console.log("\n\nHapus Data CPMK Berhasil\n");
   });
