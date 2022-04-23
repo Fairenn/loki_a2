@@ -1,7 +1,25 @@
 const express = require ('express');
 const router = express.Router();           
 
-  //route Dosen dapat mengubah komponen penilaian
+//route Dosen dapat menambah komponen penilaian
+  router.post("/tambah", (req, res) => {
+    let add={
+        "message":"-----Tambah Komponen Nilai-----",
+        "Course_id":"JSI62125",
+        "Name":"pemrograman Web",
+        "komponen_nilai":[
+                      "1. Tugas =  15%",
+                      "2. Kehadiran = 10%",
+                      "3. UTS = 30%",
+                      "4. UAS = 45%",
+         ]
+
+    }
+    res.json(add);
+    console.log("Komponen penilaian berhasil ditambahkan");
+  });
+
+//route Dosen dapat mengubah komponen penilaian
   router.put("/Ubah", (req, res) => {
     let upd={
       "message":"-----Ubah Komponen Nilai-----",
@@ -24,7 +42,7 @@ const router = express.Router();
       "message":"-----Hapus Komponen Nilai-----",
       "Course_id":"JSI62125",
       "Name":"Pemograman Web",
-      "komponen":[
+      "komponen_nilai":[
         "1. Tugas   = 10%",
         "2. Kuis    = 15%",
         "3. UTS     = 35%",
