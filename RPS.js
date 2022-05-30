@@ -1,5 +1,13 @@
 const express = require("express");
-const router = express.Router();
+const router = express();
+
+router.set('view engine', 'ejs');
+router.use( express.static( "views" ) );
+
+router.get("/", (req, res) =>       
+{
+    res.render('rps');
+});
 
 //6. route menambah RPS baru
 router.post("/tambahrps", (req, res) => {
