@@ -17,9 +17,6 @@ app.use( express.static( "views" ) );
 
 app.use('/komponenNilai',komponenNilai)
 
-// const databaseLoki = require('./databaseLoki');
-// app.use('/databaseLoki',databaseLoki)
-
 const auth = require('./auth');
 app.use('/auth',auth)
 
