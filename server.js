@@ -46,6 +46,13 @@ app.get("/listRPS", (req, res) =>
     res.render('ListRPS');
 });
 
+app.get("/admin", (req, res) => 
+{
+    res.render('dashboardAdmin');
+});
+
+
+
 app.listen(port, () =>{
  console.log(`Server Sedang Berjalan`)
 });
