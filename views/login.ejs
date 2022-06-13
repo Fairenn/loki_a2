@@ -25,11 +25,11 @@
                         <h3>Portal Akademik Universitas Andalas</h3>
                         <p>Login</p>
                     </div>
-                    <form action="/">
+                    <form action="/auth/login" method="post">
                         <div class="form-group position-relative has-icon-left">
                             <label for="username">Username</label>
                             <div class="position-relative">
-                                <input type="text" class="form-control" id="username">
+                                <input type="text" class="form-control" id="username" name="email" required>
                                 <div class="form-control-icon">
                                     <i data-feather="user"></i>
                                 </div>
@@ -41,7 +41,7 @@
                                
                             </div>
                             <div class="position-relative">
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" id="password" name="password" required>
                                 <div class="form-control-icon">
                                     <i data-feather="lock"></i>
                                 </div>
@@ -49,12 +49,13 @@
                         </div>
 
                         <div class='form-check clearfix my-4'>
-                            
+                        
+                        <a href="/listRPS">Anda Mahasiswa? Klik disini</a>
                             
                         </div>
                         <div class="clearfix">
                             <center>
-                                <button class="btn btn-primary">Login</button>
+                                <button type="submit" class="btn btn-primary">Login</button>
                             </center>
                            
                         </div>

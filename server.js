@@ -1,11 +1,16 @@
 const express = require('express');
 const app = express()
 const port = 3000
-
+const bodyParser = require("body-parser");
+const cookieParser = require('cookie-parser');
 const controller = require(`./controller/controllerUsers`);
 
-
 const komponenNilai = require('./komponenNilai');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cookieParser());
 
 app.set('view engine', 'ejs');
 app.use( express.static( "views" ) );
@@ -37,6 +42,11 @@ app.get("/cetak", (req, res) =>
 app.get("/", (req, res) =>       
 {
     res.render('dashboard');
+});
+
+app.get("/listRPS", (req, res) => 
+{
+    res.render('ListRPS');
 });
 
 app.listen(port, () =>{

@@ -2,24 +2,25 @@ const express = require('express');
 const router = express()
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
+const controllerUsers = require("./controller/controllerUsers");
 
 router.set('view engine', 'ejs');
 router.use( express.static( "views" ) );
 
-router.post("/login", (req, res) => 
-{
-    res.send("Ini adalah Halaman Login");
-});
+router.post("/login", controllerUsers.login)
+router.post("/register", controllerUsers.register)
 
-router.get("/logout", (req, res) => 
+router.get("/register", (req, res) => 
 {
-    res.send("Ini adalah Halaman logout");
+    res.render("register");
 });
 
 router.get("/login", (req, res) => 
 {
     res.render('login');
 });
+
+
 
 module.exports = router;
 
