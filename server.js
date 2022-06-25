@@ -36,7 +36,7 @@ app.get("/cetak", (req, res) =>
     res.send("Cetak RPS");
 });
 
-app.get("/", (req, res) =>       
+app.get("/dashboardDosen", (req, res) =>       
 {
     res.render('dashboard');
 });
@@ -49,6 +49,24 @@ app.get("/listRPS", (req, res) =>
 app.get("/admin", (req, res) => 
 {
     res.render('dashboardAdmin');
+});
+
+
+app.get("/detailrps", (req, res) => 
+{
+    res.render('detailrps');
+});
+
+
+app.get("/editrps", (req, res) => 
+{
+    res.render('editrps');
+});
+
+
+app.get("/tambahrps", (req, res) => 
+{
+    res.render('tambahrps');
 });
 
 
