@@ -64,11 +64,22 @@ app.get("/editrps", (req, res) =>
 });
 
 
-app.get("/tambahrps", (req, res) => 
+app.get("/tambahmatkul", (req, res) => 
 {
-    res.render('tambahrps');
+    res.render('tambahmatkul');
 });
 
+
+app.get("/detailrps-anonim", (req, res) => 
+{
+    res.render('detailrps-anonim');
+});
+
+
+app.get("/revisirps", (req, res) => 
+{
+    res.render('revisirps');
+});
 
 
 app.listen(port, () =>{
