@@ -57,12 +57,27 @@ app.get("/detailrps", (req, res) =>
     res.render('detailrps');
 });
 
-
 app.get("/editrps", (req, res) => 
 {
     res.render('editrps');
 });
 
+app.get("/cpmk", (req, res) => 
+{
+    res.render('cpmk');
+});
+app.get("/pertemuanmingguan", (req, res) => 
+{
+    res.render('pertemuanmingguan');
+});
+app.get("/referensi", (req, res) => 
+{
+    res.render('referensi');
+});
+app.get("/KompPenilaian", (req, res) => 
+{
+    res.render('KompPenilaian');
+});
 
 app.get("/tambahmatkul", (req, res) => 
 {
