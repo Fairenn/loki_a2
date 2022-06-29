@@ -46,6 +46,37 @@ app.get("/listRPS", (req, res) =>
     res.render('ListRPS');
 });
 
+app.get("/detailrps-anonim", (req, res) => 
+{
+    res.render('detailrps-anonim');
+});
+app.get("/cetakrps", (req, res) => 
+{
+    res.render('cetakrps');
+});
+app.get("/editrps", (req, res) => 
+{
+    res.render('editrps');
+});
+app.get("/cpmk", (req, res) => 
+{
+    res.render('cpmk');
+});
+app.get("/pertemuanmingguan", (req, res) => 
+{
+    res.render('pertemuanmingguan');
+});
+app.get("/referensi", (req, res) => 
+{
+    res.render('referensi');
+});
+app.get("/KompPenilaian", (req, res) => 
+{
+    res.render('KompPenilaian');
+});
+
+
+
 app.listen(port, () =>{
  console.log(`Server Sedang Berjalan`)
 });
