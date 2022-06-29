@@ -36,7 +36,7 @@ app.get("/cetak", (req, res) =>
     res.send("Cetak RPS");
 });
 
-app.get("/", (req, res) =>       
+app.get("/dashboardDosen", (req, res) =>       
 {
     res.render('dashboard');
 });
@@ -46,18 +46,22 @@ app.get("/listRPS", (req, res) =>
     res.render('ListRPS');
 });
 
-app.get("/detailrps-anonim", (req, res) => 
+app.get("/admin", (req, res) => 
 {
-    res.render('detailrps-anonim');
+    res.render('dashboardAdmin');
 });
-app.get("/cetakrps", (req, res) => 
+
+
+app.get("/detailrps", (req, res) => 
 {
-    res.render('cetakrps');
+    res.render('detailrps');
 });
+
 app.get("/editrps", (req, res) => 
 {
     res.render('editrps');
 });
+
 app.get("/cpmk", (req, res) => 
 {
     res.render('cpmk');
@@ -75,6 +79,22 @@ app.get("/KompPenilaian", (req, res) =>
     res.render('KompPenilaian');
 });
 
+app.get("/tambahmatkul", (req, res) => 
+{
+    res.render('tambahmatkul');
+});
+
+
+app.get("/detailrps-anonim", (req, res) => 
+{
+    res.render('detailrps-anonim');
+});
+
+
+app.get("/revisirps", (req, res) => 
+{
+    res.render('revisirps');
+});
 
 
 app.listen(port, () =>{

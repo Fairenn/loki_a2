@@ -97,7 +97,7 @@ controller.register = async function (req, res) {
         maxAge: 24 * 60 * 60 * 1000,
       })
       // .json({token})
-      .redirect("/");
+      .redirect("/dashboardDosen");
   
   };
 
