@@ -95,9 +95,34 @@ app.get("/revisirps", (req, res) =>
 {
     res.render('revisirps');
 });
+
+
 app.get("/cetakrps", (req, res) => 
 {
     res.render('cetakrps');
+});
+
+
+app.get("/detailrpsadmin", (req, res) => 
+{
+    res.render('detailrpsadmin');
+});
+
+app.get("/cpmkcpl", (req, res) => 
+{
+    res.render('cpmkcpl');
+});
+
+
+app.get("/keloladosen", (req, res) => 
+{
+    res.render('keloladosen');
+});
+
+
+app.get("/persentaserps", (req, res) => 
+{
+    res.render('persentaserps');
 });
 
 
