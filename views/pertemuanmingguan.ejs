@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashboard Dosen - Edit RPS</title>
+        <title>Dashboard Dosen - Pertemuan Mingguan</title>
         
         <link rel="stylesheet" href="assets/css/bootstrap.css">
         
@@ -35,12 +35,9 @@
                         <i data-feather="home" width="20"></i> 
                         <span>Dashboard - RPS List</span>
                     </a>
-
-                    
-
                     <h6 class='sidebar-link'>
                         <i data-feather="home" width="20"></i> 
-                        <span>Edit RPS</span>
+                        <span>Pertemuan Mingguan</span>
                     </h6>
 
                     
@@ -95,110 +92,85 @@
                 </ul>
         </nav>
             
-<div class="main-content container-fluid">
-    <div class="page-title">
-        <div class="row">
-            <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Edit RPS</h3>
-                <p class="text-subtitle text-muted">Halaman edit RPS</p>
-                <thead>
+        <section class="section">
+          <div class="card">
+              
+              <div class="card-body">
+                  <table class='table table-striped' id="table1">
+                      <thead>
                     <tr>
-                      <th>Minggu ke</th>
-                      <th>Materi ajar</th>
+                      <th>Minggu ke-</th>
+                      <th>Kemampuan Yang Diharapkan</th>
+                      <th>Bahan Kajian</th>
                       <th>Metode Pembelajaran</th>
-                      <th>Pengalaman Belajar</th>
+                      <th>Pengalaman Belajar Mahasiswa</th>
+                      <th>Kriteria</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>javascript</td>
-                      <td>Presentasi Dosen</td>
-                      <td>Menyelesaikan Latihan</td>
+                      <td>Mampu menjelaskan konsep dasar aplikasi berbasis web</td>
+                      <td>Pengenalan Web</td>
+                      <td>Diskusi</td>
+                      <td>Mahasiswa memberikan tanggapan tentang konsep dasar</td>
+                      <td>Keaktifan</td>
                       <td>
-                        <button class="btn"><i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#EditMingguan"></i></button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#inlineFormPertMgg">Edit</button>
                 
-                        <!--edit form Modal -->
-                        <div class="modal fade text-left" id="EditMingguan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
+                        <div class="modal fade text-left" id="inlineFormPertMgg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
                           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                             <div class="modal-content">
-                                <form action="/dosen/ubahpertemuan-mingguan" method="post">
                               <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel33">Edit Pertemuan Mingguan</h4>
+                                <h4 class="modal-title" id="myModalLabel33">Ubah Pertemuan Mingguan</h4>
                                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                   <i data-feather="x"></i>
                                 </button>
                               </div>
                               <form action="#">
                                 <div class="modal-body">
-                                  <label>Minggu Ke</label>
-                                  <div class="form-group">
-                                    <input type="text" class="form-control" id="readonlyInput" />
+                                  <label>Minggu Ke-</label>
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" id="readonlyInput" />
+                                   </div>
+                                  <label>Kemampuan Yang Diharapkan</label>
+                                   <div class="form-group">
+                                     <input type="text" class="form-control" id="readonlyInput" />
                                   </div>
-                                  <label>Materi Ajar</label>
-                                  <div class="form-group">
-                                    <input type="text" class="form-control" id="readonlyInput" />
-                                  </div>
+                                  <label>Bahan Kajian</label>
+                                    <div class="form-group">
+                                     <input type="text" class="form-control" id="readonlyInput" />
+                                   </div>
                                   <label>Metode Pembelajaran</label>
+                                   <div class="form-group">
+                                      <input type="text" class="form-control" id="readonlyInput" />
+                                    </div>
+                                 <label>Pengalaman Belajar Mahasiswa</label>
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" id="readonlyInput" />
+                                    </div>
+                                  <label>Kriteria</label>
                                   <div class="form-group">
                                     <input type="text" class="form-control" id="readonlyInput" />
                                   </div>
-                                  <label>Pengalaman Belajar</label>
-                                  <div class="form-group">
-                                    <input type="text" class="form-control" id="readonlyInput" />
-                                  </div>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                    <i class="bx bx-x d-block d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Close</span>
-                                  </button>
-                                  <button type="submit" class="btn btn-primary ml-1">
-                                    <i class="bx bx-check d-block d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Edit</span>
-                                  </button>
-                                </div>
-                              </form>
-                            </form>
-                            </div>
-                          </div>
-                        </div>
-                
-                        <button class="btn"><i class="fas fa-trash" data-bs-toggle="modal" data-bs-target="#hapusPertMgg"></i></button>
-                
-                        <!--Danger theme Modal -->
-                        <div class="modal fade text-left" id="hapusPertMgg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel120" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                            <div class="modal-content">
-                                <form action="/dosen/hapuspertemuan-mingguan" method="post">
-                                    <div class="modal-header bg-danger">
-                                        <h5 class="modal-title white" id="myModalLabel120">Peringatan
-                                        </h5>
-                                        <button type="button" class="close" data-bs-dismiss="modal"
-                                            aria-label="Close">
-                                            <i data-feather="x"></i>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        
-                                        Yakin Ingin menghapus?
-                                    </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-light-secondary"
-                                            data-bs-dismiss="modal">
-                                            <i class="bx bx-x d-block d-sm-none"></i>
-                                            <span class="d-none d-sm-block">Batal</span>
-                                        </button>
-                                        <button type="submit" class="btn btn-danger ml-1">
-                                            <i class="bx bx-check d-block d-sm-none"></i>
-                                            <span class="d-none d-sm-block">Hapus</span>
-                                        </button>
+                                      <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                        <i class="bx bx-x d-block d-sm-none"></i>
+                                          <span class="d-none d-sm-block">Tutup</span>
+                                       </button>
+                                      <button type="submit" class="btn btn-primary ml-1" data-bs-dismiss="modal">
+                                        <i class="bx bx-check d-block d-sm-none"></i>
+                                        <span class="d-none d-sm-block">Ubah</span>
+                                      </button>
                                     </div>
-                                </form>
+                              </form>
                             </div>
                           </div>
-                        </div>
+                        </div>  
+                            
+                        <a onClick="return confirm('Apakah Anda Yakin Ingin Menghapus ? ')" class="btn btn-danger">Hapus</a>
+   
                       </td>
                     </tr>
                   </tbody>
@@ -206,10 +178,7 @@
                 <br />
                 
                 <span>
-                  <!-- Button trigger for tambah form modal -->
-                  <button type="button" class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#inlineFormPertMgg">+ Tambah</button>
-                
-                  <!--tambah form Modal -->
+                  <button type="button" class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#inlineFormPertMgg">Tambah</button>
                   <div class="modal fade text-left" id="inlineFormPertMgg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                       <div class="modal-content">
@@ -221,11 +190,15 @@
                         </div>
                         <form action="#">
                           <div class="modal-body">
-                            <label>Minggu Ke</label>
+                            <label>Minggu Ke-</label>
                             <div class="form-group">
                               <input type="text" class="form-control" id="readonlyInput" />
                             </div>
-                            <label>Materi Ajar</label>
+                            <label>Kemampuan Yang Diharapkan</label>
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="readonlyInput" />
+                            </div>
+                            <label>Bahan Kajian</label>
                             <div class="form-group">
                               <input type="text" class="form-control" id="readonlyInput" />
                             </div>
@@ -233,10 +206,13 @@
                             <div class="form-group">
                               <input type="text" class="form-control" id="readonlyInput" />
                             </div>
-                            <label>Pengalaman Belajar</label>
+                          <label>Pengalaman Belajar Mahasiswa</label>
                             <div class="form-group">
                               <input type="text" class="form-control" id="readonlyInput" />
                             </div>
+                          <label>Kriteria</label>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="readonlyInput" />
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">

@@ -36,12 +36,6 @@
                         <span>Dashboard - RPS List</span>
                     </a>
 
-                    
-
-                    <h6 class='sidebar-link'>
-                        <i data-feather="home" width="20"></i> 
-                        <span>Edit RPS</span>
-                    </h6>
 
                     
                 </li>
@@ -95,15 +89,12 @@
                 </ul>
         </nav>
             
-<div class="main-content container-fluid">
-    <div class="page-title">
-        <div class="row">
-            <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Edit RPS</h3>
-                <p class="text-subtitle text-muted">Halaman edit RPS</p>
+        <section class="section">
+            <div class="card">
                 
-                <table class="table table-hover mb-0">
-                    <thead>
+                <div class="card-body">
+                    <table class='table table-striped' id="table1">
+                        <thead>
                         <tr>
                             <th>No</th>
                             <th>CPMK</th>
@@ -113,100 +104,49 @@
                     <tbody>
                         <tr>
                             <td class="text-bold-500">1</td>
+                            <td>Mahasiswa mampu menjelaskan konsep dasar aplikasi berbasis web</td>
                             <td>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quis facilis cumque nemo 
-                            </td>
-                            <td>
-                                <button class="btn"><i class="fas fa-edit" data-bs-toggle="modal" 
-                                    data-bs-target="#inlineEditForm"></i> </button>
-                            
-                            
-                                <!--edit form Modal -->
-                                <div class="modal fade text-left" id="inlineEditForm" tabindex="-1" role="dialog"
+
+                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#inlineFormCpmk">Edit</button>
+                    
+                            <div class="modal fade text-left" id="inlineFormCpmk" tabindex="-1" role="dialog"
                                 aria-labelledby="myModalLabel33" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered "
-                                role="document">
-                                <div class="modal-content">
-                                    <form action="/dosen/ubahcpmk" method="post">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title" id="myModalLabel33">Edit CPMK </h4>
-                                                    <button type="button" class="close" data-bs-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <i data-feather="x"></i>
-                                                    </button>
-                                                </div>
-                                                <form action="#">
-                                                    <div class="modal-body">
-                                        <label>Pilih CP Program Studi</label>
-                                        <div class="form-group">
-                                            <select class="choices form-select" multiple="multiple">
-                                                <option value="square">Square</option>
-                                                <option value="rectangle" selected>Rectangle</option>
-                                                <option value="rombo">Rombo</option>
-                                                <option value="traible" selected>Triangle</option>
-                                                <option value="polygon">Polygon</option>
-                                            </select>
-                                        </div
-                                        <label>CPMK </label>
-                                        <div class="form-group">
-                                            <input type="text" placeholder="Masukkan cpmk"
-                                                class="form-control">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel33">Tambah CPMK </h4>
+                                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                <i data-feather="x"></i>
+                                            </button>
                                         </div>
-                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-light-secondary"
-                                                        data-bs-dismiss="modal">
-                                                        <i class="bx bx-x d-block d-sm-none"></i>
-                                                            <span class="d-none d-sm-block">Close</span>
-                                                        </button>
-                                                        <button type="submit" class="btn btn-primary ml-1">
-                                                            <i class="bx bx-check d-block d-sm-none"></i>
-                                                            <span class="d-none d-sm-block">Edit</span>
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                            </form>
+                                        <form action="#">
+                                            <div class="modal-body">
+                                                
+                                                <label>CPMK </label>
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Masukkan cpmk"
+                                                        class="form-control">
+                                                </div>
                                             </div>
-                                        </div>
-                                </div>
-                
-                                <button class="btn"><i class="fas fa-trash" data-bs-toggle="modal"
-                                    data-bs-target="#hapuscpmk"></i></button>
-                
-                                <!--Danger theme Modal -->
-                                <div class="modal fade text-left modal-borderless" id="hapuscpmk" tabindex="-1" role="dialog"
-                                    aria-labelledby="myModalLabel120" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <form action="/dosen/hapuscpmk" method="post">
-                                                <div class="modal-header bg-danger">
-                                                    <h5 class="modal-title white" id="myModalLabel120">Peringatan
-                                                    </h5>
-                                                    <button type="button" class="close" data-bs-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <i data-feather="x"></i>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    
-                                                    Yakin Ingin menghapus?
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-light-secondary"
-                                                        data-bs-dismiss="modal">
-                                                        <i class="bx bx-x d-block d-sm-none"></i>
-                                                        <span class="d-none d-sm-block">Batal</span>
-                                                    </button>
-                                                    <button type="submit" class="btn btn-danger ml-1">
-                                                        <i class="bx bx-check d-block d-sm-none"></i>
-                                                        <span class="d-none d-sm-block">Hapus</span>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-light-secondary"
+                                                    data-bs-dismiss="modal">
+                                                    <i class="bx bx-x d-block d-sm-none"></i>
+                                                    <span class="d-none d-sm-block">Batal</span>
+                                                </button>
+                                                <button type="submit" class="btn btn-primary ml-1"
+                                                    data-bs-dismiss="modal">
+                                                    <i class="bx bx-check d-block d-sm-none"></i>
+                                                    <span class="d-none d-sm-block">Tambah</span>
+                                                </button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
+                            </div>
                 
+                            <a onClick="return confirm('Apakah Anda Yakin Ingin Menghapus ? ')" class="btn btn-danger">Hapus</a>
+
                             </td>
                         </tr>
                     </tbody>
@@ -232,16 +172,7 @@
                                 </div>
                                 <form action="#">
                                     <div class="modal-body">
-                                        <label>Pilih CP Program Studi</label>
-                                        <div class="form-group">
-                                            <select class="choices form-select" multiple="multiple">
-                                                <option value="square">Square</option>
-                                                <option value="rectangle" selected>Rectangle</option>
-                                                <option value="rombo">Rombo</option>
-                                                <option value="traible" selected>Triangle</option>
-                                                <option value="polygon">Polygon</option>
-                                            </select>
-                                        </div
+                                        
                                         <label>CPMK </label>
                                         <div class="form-group">
                                             <input type="text" placeholder="Masukkan cpmk"
@@ -252,7 +183,7 @@
                                         <button type="button" class="btn btn-light-secondary"
                                             data-bs-dismiss="modal">
                                             <i class="bx bx-x d-block d-sm-none"></i>
-                                            <span class="d-none d-sm-block">Tutup</span>
+                                            <span class="d-none d-sm-block">Batal</span>
                                         </button>
                                         <button type="submit" class="btn btn-primary ml-1"
                                             data-bs-dismiss="modal">

@@ -95,6 +95,10 @@ app.get("/revisirps", (req, res) =>
 {
     res.render('revisirps');
 });
+app.get("/cetakrps", (req, res) => 
+{
+    res.render('cetakrps');
+});
 
 
 app.listen(port, () =>{
