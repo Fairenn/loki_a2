@@ -17,83 +17,13 @@
     </head>
 <body>
     <div id="app">
-        <div id="sidebar" class='active'>
-            <div class="sidebar-wrapper active">
-    <div class="sidebar-header">
-        <img src="assets/images/logounand.png" alt="" srcset="">
-    </div>
-    <div class="sidebar-menu">
-        <ul class="menu">
-            
-                
-                <li class='sidebar-title'>Menu</li>
-                
-                
-                <li class="sidebar-item  ">
-
-                    <a href="/dashboardDosen" class='sidebar-link'>
-                        <i data-feather="home" width="20"></i> 
-                        <span>Dashboard - RPS List</span>
-                    </a>
-
-                    
-
-                    <h6 class='sidebar-link'>
-                        <i data-feather="home" width="20"></i> 
-                        <span>Edit RPS</span>
-                    </h6>
-
-                    
-                </li>
-        </ul>
-    </div>
-    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
-</div>
-        </div>
+        <!-- sidebar -->
+        <%- include('layouts/sidebar') %> 
+        
+        <!-- headerr -->
+        <%- include('layouts/header') %> 
         <div id="main">
-            <nav class="navbar navbar-header navbar-expand navbar-light">
-                <ul class="navbar-nav d-flex align-items-center navbar-light ms-auto">
-                    <h5>Selamat Datang, Pak Dosen!</h5>
-                    
-
-                    <div class="modal-primary me-1 mb-1 d-inline-block">
-                        <!-- Button trigger for primary themes modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary">
-                            LOGOUT
-                        </button>
-
-                        <!--primary theme Modal -->
-                        <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog"
-                            aria-labelledby="myModalLabel160" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header bg-primary">
-                                <h5 class="modal-title white" id="myModalLabel160">Logout?</h5>
-                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                    <i data-feather="x"></i>
-                                </button>
-                                </div>
-                                <div class="modal-body">
-                                Apakah anda yakin untuk logout?
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                    <i class="bx bx-x d-block d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Batal</span>
-                                </button>
-                                <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal">
-                                    <i class="bx bx-check d-block d-sm-none"></i>
-                                    <a href="/auth/login"><span class="d-none d-sm-block">Logout</span></a>
-                                </button>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    
-
-                </ul>
-        </nav>
+            
             
 <div class="main-content container-fluid">
     <div class="page-title">
