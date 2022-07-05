@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard - Detail RPS</title>
+        
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        
+        <link rel="stylesheet" href="assets/vendors/chartjs/Chart.min.css">
+    
+        <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
+    
+        <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+        <link rel="shortcut icon" href="assets/images/logounand.png" type="image/x-icon">
+    </head>
+<body>
+    <div id="app">
+        <div id="sidebar" class='active'>
+            <div class="sidebar-wrapper active">
+    <div class="sidebar-header">
+        <img src="assets/images/logounand.png" alt="" srcset=""><p>Portal Akademik</p>
+    </div>
+    <div class="sidebar-menu">
+        <ul class="menu">
+            
+                
+                <li class='sidebar-title'>Menu</li>
+                
+                
+                <li class="sidebar-item  ">
+
+                    <a href="/listRPS" class='sidebar-link'>
+                        <i data-feather="home" width="20"></i> 
+                        <span>Dashboard - List RPS</span>
+                    </a>
+
+                    <h6 class='sidebar-link'>
+                        <i data-feather="home" width="20"></i> 
+                        <span>Detail RPS</span>
+                    </h6>
+
+                
+                    
+                </li>
+        </ul>
+    </div>
+    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+</div>
+        </div>
+        <div id="main">
+            <nav class="navbar navbar-header navbar-expand navbar-light">
+                <ul class="navbar-nav d-flex align-items-center navbar-light ms-auto">
+                    Selamat Datang! Silahkan Login untuk Akses Lebih Lanjut &emsp;
+                    <a href="/auth/login" class="btn btn-primary">LOGIN</a>
+                </ul>
+        </nav>
+            
+<div class="main-content container-fluid">
+    <div class="page-title">
+        <div class="row" id = "blokcetak">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Detail RPS</h3>
+                <p class="text-subtitle text-muted">Halaman detail RPS</p>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="card">
+            
+            <div class="card-body">
+                <table class='table table-striped' id="table1">
+                    <thead>
+                        <tr>
+                            <th>Kode Matkul</th>
+                            <th>Mata Kuliah</th>
+                            <th>Deskripsi</th>
+                            <th>Keterangan</th>
+                            <th>CPMK</th>
+                            <th>CP</th>
+                            <th>Referensi</th>
+                            <th>Komponen Penilaian</th>
+                            <th>Pertemuan Mingguan</th>
+
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>JSI001</td>
+                            <td>Pemrograman Web</td>
+                            <td>Web</td>
+                            <td>Web</td>
+                            <td>Mahasiswa mampu menjelaskan konsep dasar aplikasi berbasis web</td>
+                            <td>CP-1</td>
+                            <td>Matt Doyle, 2009, "Beginning PHP 5.3", Wrox</td>
+                            <td>Tugas</td>
+                            <td>1</td>
+
+                            
+                           
+                        </tr>
+                       
+
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+
+    </section>
+    <a href="/cetakrps" class="btn btn-primary">Cetak</a>
+
+
+</div>
+
+<footer>
+    <div class="footer clearfix mb-0 text-muted">
+        <div class="float-start">
+            
+            <p>RPS App - Universitas Andalas</p>
+        </div>
+    </div>
+</footer>
+        </div>
+    </div>
+    <script src="assets/js/feather-icons/feather.min.js"></script>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+<script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
+<script src="assets/js/vendors.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

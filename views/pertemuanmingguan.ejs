@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard Dosen - Pertemuan Mingguan</title>
+        
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        
+        <link rel="stylesheet" href="assets/vendors/chartjs/Chart.min.css">
+    
+        <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
+    
+        <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+        <link rel="shortcut icon" href="assets/images/logounand.png" type="image/x-icon">
+    </head>
+<body>
+    <div id="app">
+        <!-- sidebar -->
+        <%- include('layouts/sidebar') %> 
+        
+        <!-- headerr -->
+        <%- include('layouts/header') %> 
+        <div id="main">
+            
+            
+        <section class="section">
+          <div class="card">
+              
+              <div class="card-body">
+                  <table class='table table-striped' id="table1">
+                      <thead>
+                    <tr>
+                      <th>Minggu ke-</th>
+                      <th>Kemampuan Yang Diharapkan</th>
+                      <th>Bahan Kajian</th>
+                      <th>Metode Pembelajaran</th>
+                      <th>Pengalaman Belajar Mahasiswa</th>
+                      <th>Kriteria</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Mampu menjelaskan konsep dasar aplikasi berbasis web</td>
+                      <td>Pengenalan Web</td>
+                      <td>Diskusi</td>
+                      <td>Mahasiswa memberikan tanggapan tentang konsep dasar</td>
+                      <td>Keaktifan</td>
+                      <td>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#inlineFormPertMgg">Edit</button>
+                
+                        <div class="modal fade text-left" id="inlineFormPertMgg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel33">Ubah Pertemuan Mingguan</h4>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                  <i data-feather="x"></i>
+                                </button>
+                              </div>
+                              <form action="#">
+                                <div class="modal-body">
+                                  <label>Minggu Ke-</label>
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" id="readonlyInput" />
+                                   </div>
+                                  <label>Kemampuan Yang Diharapkan</label>
+                                   <div class="form-group">
+                                     <input type="text" class="form-control" id="readonlyInput" />
+                                  </div>
+                                  <label>Bahan Kajian</label>
+                                    <div class="form-group">
+                                     <input type="text" class="form-control" id="readonlyInput" />
+                                   </div>
+                                  <label>Metode Pembelajaran</label>
+                                   <div class="form-group">
+                                      <input type="text" class="form-control" id="readonlyInput" />
+                                    </div>
+                                 <label>Pengalaman Belajar Mahasiswa</label>
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" id="readonlyInput" />
+                                    </div>
+                                  <label>Kriteria</label>
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" id="readonlyInput" />
+                                  </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                        <i class="bx bx-x d-block d-sm-none"></i>
+                                          <span class="d-none d-sm-block">Tutup</span>
+                                       </button>
+                                      <button type="submit" class="btn btn-primary ml-1" data-bs-dismiss="modal">
+                                        <i class="bx bx-check d-block d-sm-none"></i>
+                                        <span class="d-none d-sm-block">Ubah</span>
+                                      </button>
+                                    </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>  
+                            
+                        <a onClick="return confirm('Apakah Anda Yakin Ingin Menghapus ? ')" class="btn btn-danger">Hapus</a>
+   
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br />
+                
+                <span>
+                  <button type="button" class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#inlineFormPertMgg">Tambah</button>
+                  <div class="modal fade text-left" id="inlineFormPertMgg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title" id="myModalLabel33">Tambah Pertemuan Mingguan</h4>
+                          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <i data-feather="x"></i>
+                          </button>
+                        </div>
+                        <form action="#">
+                          <div class="modal-body">
+                            <label>Minggu Ke-</label>
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="readonlyInput" />
+                            </div>
+                            <label>Kemampuan Yang Diharapkan</label>
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="readonlyInput" />
+                            </div>
+                            <label>Bahan Kajian</label>
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="readonlyInput" />
+                            </div>
+                            <label>Metode Pembelajaran</label>
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="readonlyInput" />
+                            </div>
+                          <label>Pengalaman Belajar Mahasiswa</label>
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="readonlyInput" />
+                            </div>
+                          <label>Kriteria</label>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="readonlyInput" />
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                              <i class="bx bx-x d-block d-sm-none"></i>
+                              <span class="d-none d-sm-block">Tutup</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary ml-1" data-bs-dismiss="modal">
+                              <i class="bx bx-check d-block d-sm-none"></i>
+                              <span class="d-none d-sm-block">Tambah</span>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<footer>
+    <div class="footer clearfix mb-0 text-muted">
+        <div class="float-start">
+            
+            <p>RPS App - Universitas Andalas</p>
+        </div>
+    </div>
+</footer>
+        </div>
+    </div>
+    <script src="assets/js/feather-icons/feather.min.js"></script>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+<script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
+<script src="assets/js/vendors.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
